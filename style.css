@@ -1,29 +1,71 @@
+
 /*
-Teste   se ta linkando 
+ resolução 
 */
 
 
-/* 
 
-*/
+/** fonte**/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+body
+    .open-sans-<uniquifier> {
+        font-family: "Open Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100;
+      }
+
+/* layout*/
+.container{
+    margin: 0 auto;
+    background-color: rgb(160, 36, 160)
+}
+
+*{
+    margin:0;
+    border: 0;  
+    padding: 0;    
+}
+
 @media(min-width: 576px){
     body{
-        background-color: #0ff;
+        background-color: rgb(59, 106, 106)
     }
 
+/* layout*/
+
+.container{
+max-width: 540px;
 }
+
 
 @media(min-width: 768px){
     body{
-        background-color: #000f;
+        background-color: rgb(9, 9, 224)
     }
-
+/* layout*/
+.container{
+    max-width: 720px;
 }
 
 
 @media(min-width: 992px){
     body{
-        background-color: rgb(228, 25, 25);
+        background-color: rgb(30, 239, 30)
+    }
+    /* layout*/
+    .container{
+        max-width: 960px;
     }
 
-}
+@media(min-width: 1200px){
+    body{
+        background-color: rgb(19, 140, 19)
+    }
+
+     /* layout*/
+    .container{
+        max-width: 1140px;
+    }
