@@ -1,13 +1,10 @@
 
-/*
- resolução 
-*/
+/* FONTE DAS LENTRA DO SITE */
 
-
-
-/** fonte**/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 <body>
+
+
     .open-sans-<uniquifier> {
         font-family: "Open Sans", serif;
         font-optical-sizing: auto;
@@ -17,17 +14,21 @@
           "wdth" 100;
       }
 
-/* layout*/
-.container{
-    margin: 0 auto;
-    background-color: rgb(160, 36, 160)
-}
 
+/* CSS RESET */
 *{
     margin:0;
     border: 0;  
     padding: 0;    
 }
+
+/* LAYOUT QUEBRA DE LINHA */
+.container{
+    margin: 0 auto;
+    background-color: rgb(160, 36, 160)
+}
+
+/* resolução PX Resouluçao Quebra de linha */
 
 @media(min-width: 576px){
     body{
@@ -45,6 +46,7 @@ max-width: 540px;
     body{
         background-color: rgb(9, 9, 224)
     }
+
 /* layout*/
 .container{
     max-width: 720px;
