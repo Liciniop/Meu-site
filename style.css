@@ -25,7 +25,7 @@
 /* LAYOUT QUEBRA DE LINHA */
 .container{
     margin: 0 auto;
-    background-color: rgb(160, 36, 160)
+  /* Indeficação  texto horizontalmente */   background-color: rgb(160, 36, 160)
 }
 
 /* resolução PX Resouluçao Quebra de linha */
