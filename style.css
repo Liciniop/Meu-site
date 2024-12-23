@@ -7,7 +7,7 @@
 
 /** fonte**/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-body
+<body>
     .open-sans-<uniquifier> {
         font-family: "Open Sans", serif;
         font-optical-sizing: auto;
