@@ -12,7 +12,7 @@
         font-style: normal;
         font-variation-settings:
           "wdth" 100;
-      }
+        }
 
 
 /* CSS RESET */
@@ -28,6 +28,21 @@
   /* Indeficação  texto horizontalmente */   background-color: rgb(160, 36, 160)
 }
 
+
+.Flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TOPO DO SITE */
+
+
+
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
 /* resolução PX Resouluçao Quebra de linha */
 
 @media(min-width: 576px){
