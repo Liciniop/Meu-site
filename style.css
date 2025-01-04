@@ -3,8 +3,14 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remover margens para evitar espaço extra */
+    padding: 0; /* Remover padding para evitar espaço extra */
+    height: 100vh; /* Garantir que o corpo ocupe toda a altura da tela */
+    background-color: #f4f4f4; /* Cor de fundo leve */
+    background-image: url('Imagens/Fundo.jpg'); /* Caminho da sua imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir a tela inteira */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* A imagem de fundo não se move durante a rolagem */
 }
 
 /* CSS RESET */
@@ -17,20 +23,31 @@ body {
 /* Cabeçalho */
 header {
     display: flex;
-    justify-content: space-between; /* Distribui espaço entre logo e navegação */
-    align-items: center; /* Centraliza itens verticalmente */
+    justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
-    background-color: #f0f0f0; /* Fundo do cabeçalho */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 60px;
 }
 
 #LOGO img {
-    width: 100px; /* Tamanho da logo */
+    width: 100px;
     height: auto;
 }
 
-#check
+.Botao {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 20px 0;
+}
 
 nav {
     display: flex;
@@ -40,7 +57,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 20px; /* Espaçamento entre os itens */
+    gap: 20px;
 }
 
 nav ul li a {
@@ -52,7 +69,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #a9a9a9; /* Cor no hover */
+    color: #a9a9a9;
 }
 
 /* Container */
@@ -76,7 +93,84 @@ nav ul li a:hover {
     height: auto;
 }
 
+/* Destaque */
+main {
+    min-height: 100vh; /* Garante que o main ocupe toda a altura da tela */
+    color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+main h2 {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Estilo para a seção de produtos (acessórios) */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.produto {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produto h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.produto p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 1em;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsividade */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 90%; /* Produtos ocupando mais espaço em telas pequenas */
+    }
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -92,6 +186,10 @@ nav ul li a:hover {
 @media (min-width: 992px) {
     .container {
         max-width: 960px;
+    }
+
+    .produto {
+        width: 250px; /* Maior largura de produto em telas maiores */
     }
 }
 

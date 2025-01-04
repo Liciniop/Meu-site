@@ -15,9 +15,10 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#Acessórios">Acessórios</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#Inicio">Início</a></li>
+                <li><a href="#Acessorios">Acessórios</a></li>
+                <li><a href="#MotoPecas">Moto Peças</a></li>
+                <li><a href="#Contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -25,33 +26,66 @@
     <!-- Destaque -->
     <main>
         <div class="container">
-            <h1>Batisti Motos</h1>
+            <h1>Oficina, Peças e Acessórios</h1>
+            <a href="https://www.google.com.br/maps/place/Batisti+Motos/" target="_blank" class="Botao">Venha Nos Visitar!</a>
         </div>
     </main>
 
-    <!-- Sobre -->
-    <section>
+    <!-- Filtro de Acessórios -->
+    <section id="Acessorios">
         <div class="container">
-            <h2>O Careca das Motos: Onde o Brilho da Cabeça Compete com o Cromado das Rodas!</h2>
-        </div>
-    </section>
+            <h2>Acessórios</h2>
+            
+            <!-- Filtro de Categorias -->
+            <div class="filtro-categorias">
+                <label for="categoria">Filtrar por categoria:</label>
+                <select id="categoria">
+                    <option value="todos">Todos</option>
+                    <option value="capa">Capa para Moto</option>
+                    <option value="encosto">Encosto Traseiro</option>
+                    <option value="suporte">Suporte para Baús</option>
+                </select>
+            </div>
+            
+            <!-- Produtos -->
+            <div class="produtos" id="produtos">
+                <!-- Produto 1: Capa para Moto -->
+                <div class="produto categoria-capa">
+                    <img src="Imagens/capa_moto.jpg" alt="Capa para Moto">
+                    <h3>Capa para Moto</h3>
+                    <p>Preço à vista: R$ 150,00</p>
+                    <p>Preço a prazo: 3x de R$ 55,00</p>
+                </div>
 
-    <!-- Peças e Acessórios -->
-    <section>
-        <div class="container">
-            <h2>Peças e Acessórios para sua Moto</h2>
-        </div>
-    </section>
+                <!-- Produto 2: Encosto Traseiro -->
+                <div class="produto categoria-encosto">
+                    <img src="Imagens/encosto_traseiro.jpg" alt="Encosto Traseiro">
+                    <h3>Encosto Traseiro</h3>
+                    <p>Preço à vista: R$ 200,00</p>
+                    <p>Preço a prazo: 3x de R$ 75,00</p>
+                </div>
 
-    <!-- Capacetes -->
-    <section id="Acessórios">
-        <div class="container">
-            <h2>Capacetes</h2>
+                <!-- Produto 3: Suporte para Baú -->
+                <div class="produto categoria-suporte">
+                    <img src="Imagens/suporte_bau.jpg" alt="Suporte para Baú">
+                    <h3>Suporte para Baú</h3>
+                    <p>Preço à vista: R$ 120,00</p>
+                    <p>Preço a prazo: 3x de R$ 45,00</p>
+                </div>
+
+                <!-- Produto 4: Capa para Moto -->
+                <div class="produto categoria-capa">
+                    <img src="Imagens/capa_moto2.jpg" alt="Capa para Moto">
+                    <h3>Capa para Moto</h3>
+                    <p>Preço à vista: R$ 130,00</p>
+                    <p>Preço a prazo: 3x de R$ 50,00</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contato -->
-    <footer id="contato">
+    <footer id="Contato">
         <div class="container flex">
             <a href="https://www.linkedin.com/in/licinio-pereira-dos-santos-filho-587b292b1" target="_blank">
                 <img src="Imagens/linkedin.png" alt="Acesse o LinkedIn">
@@ -66,5 +100,21 @@
     <a href="#inicio" id="topo">
         <img src="Imagens/topo.png" alt="Voltar ao topo">
     </a>
+
+    <!-- Script para filtro de categorias -->
+    <script>
+        document.getElementById('categoria').addEventListener('change', function() {
+            var categoriaSelecionada = this.value;
+            var produtos = document.querySelectorAll('.produto');
+            
+            produtos.forEach(function(produto) {
+                if (categoriaSelecionada === 'todos' || produto.classList.contains('categoria-' + categoriaSelecionada)) {
+                    produto.style.display = 'block';
+                } else {
+                    produto.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
